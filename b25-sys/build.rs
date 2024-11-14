@@ -98,8 +98,8 @@ fn main() {
         println!("cargo:rustc-link-search=native={}/lib64", res.display());
         println!("cargo:rustc-link-lib=dylib=winscard");
     } else if cx.os.clone().unwrap_or_default().contains("linux") {
-        if pc.probe("libpcsclite").is_err() {
-            panic!("libpcsclite not found.")
+        if pc.probe("libpcsckai").is_err() {
+            panic!("libpcsckai not found.")
         }
         if pc.probe("libaribb25").is_err() || cfg!(feature = "prioritized_card_reader") {
             let res = prep_cmake(cx).build();

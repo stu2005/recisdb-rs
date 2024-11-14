@@ -10,7 +10,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git remote add upstream https://github.com/kazuki0824/recisdb-rs
-          git remote -v
+          git fetch upstream master
           git merge upstream/master
           git commit -am "fetch upstream"
           git push

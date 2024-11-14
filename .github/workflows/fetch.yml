@@ -1,6 +1,9 @@
-on: push
+on: 
+  push:
+  schedule:
+    - cron:  '29 16 * * *'
 jobs:
-  build:
+  fetch:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

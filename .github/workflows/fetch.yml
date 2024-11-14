@@ -5,6 +5,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          path: master
           fetch-depth: 0
       - run: |
           git config user.name "github-actions[bot]"

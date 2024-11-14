@@ -12,5 +12,5 @@ jobs:
           git remote add upstream https://github.com/kazuki0824/recisdb-rs
           git fetch upstream master
           git merge upstream/master
-          git commit -am "fetch upstream"
+          git commit -am "fetch upstream" || exit 0
           git push
